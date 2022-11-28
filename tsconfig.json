@@ -1,9 +1,12 @@
 {
     "compilerOptions": {
-        "module": "commonjs",
-        "target": "es6",
+        "module": "ESNext",
+        "moduleResolution": "Node",
+        "esModuleInterop": true,
         "rootDir": "./src",
         "outDir": "./dist/src",
-        "esModuleInterop": true
+    },
+    "ts-node": {
+        "esm": true
     }
 }

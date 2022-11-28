@@ -1,8 +1,8 @@
 import express from "express";
-import { Request, Response } from "express";
+import { Express, Request, Response } from "express";
 
-const app = express();
-const port = process.env.PORT || 3000;
+const app: Express = express();
+const port = process.env.PORT || 8080;
 
 const bees = (n: number): string => Array(n).fill("🐝").join("");
 
