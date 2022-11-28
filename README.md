@@ -90,7 +90,7 @@ $: npm install -D typescript ts-node @types/node @types/express
 }
 ```
 
-👉 Create the express api in **src/main.ts**
+👉 Create the express api in **src/main.ts**. It's a simple server made for a beekeeper that allows him to know the state of his hives. It exposes a single access point via **/api/hives**.
 
 ```typescript
 import express from "express";
@@ -145,7 +145,7 @@ You should get the state of the Hives when fetching your local endpoint
 
 ![Result when fetching the api](docs/assets/result.png "Result when fetching the api")
 
-### Part 3 : Deploy the app worldwide
+### Part 3 : Deploy the app
 
 👉 Log-in or create your Fly.io account
 
