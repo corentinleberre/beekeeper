@@ -1,10 +1,10 @@
 # Deploy your side project in 10 minutes with Fly.io
 
-> In this post, IP will aim on giving your the keys to **deploy quickly** your API online using Fly.io platform.
+> In this post, I will aim on giving your the keys to **deploy quickly** your API online using Fly.io platform.
 
 First, what is Fly.io ? Like classic cloud platform as AWS/GCP/Azure, Fly.io enables you to deploy your application/api/microservices/database on the cloud. But unlike these, it stands out for its simplicity.
 
-You can deploy a lot of different technologies such as Laravel/Python/Deno/Node/Go etc threw automatic templates or even use a Dockerfile. It's really easy to use thanks to the CLI tools and documentation provided. This enables you to deploy and scale your app worldwide close to your users without worrying about network, DNS or security. It also provides lots of metrics about your app with an integrated Graphana accessible on your dashboard. With the free tier, you can host 2 projects.
+You can deploy a lot of different technologies such as Php/Python/Deno/Node/Go etc threw automatic templates or even use a Dockerfile. It's really easy to use thanks to the CLI and documentation provided. This enables you to deploy and scale your app worldwide and close to your users without worrying about network, DNS or security. It also provides lots of metrics about your application with an integrated Graphana on your dashboard. With the free tier, you can host 2 projects.
 
 👉 To have more details about those features just check their [website](https://fly.io)
 
@@ -15,7 +15,7 @@ In this article, I will deploy a simple Node.js server written in Typescript, **
 Have a [Node](https://nodejs.org/en/) environment installed and [Docker](https://www.docker.com) if you want to test your build locally.
 
 👉 Install [fly cli tools](https://fly.io/docs/hands-on/install-flyctl/) 👇
- 
+
 >*Flyctl is a command-line utility that lets you work with the Fly.io platform, from creating your account to deploying your applications.*
 
 ```bash
@@ -32,7 +32,7 @@ Have a [Node](https://nodejs.org/en/) environment installed and [Docker](https:/
 
 📦 Structure of the project
 
-```
+```text
 📦beekeeper
  ┣ 📂src
  ┃ ┗ 📜main.ts
@@ -45,7 +45,7 @@ Have a [Node](https://nodejs.org/en/) environment installed and [Docker](https:/
 
 ### Part 1 : Create the Node.JS API
 
-👉 Init a npm project 
+👉 Init a npm project
 
 ```bash
 $: npm init
@@ -129,7 +129,7 @@ You can now run the app with **npm run dev**
 $: docker build -t beekeeper .
 ```
 
-👉 Verify if the image has been correctly created
+👉 Verify if the image has been created
 
 ```bash
 $: docker images | grep beekeeper
@@ -141,7 +141,8 @@ beekeeper    latest    2dc2439eaec3   1 min ago      118MB
 ```bash
 $: docker run -it -p 8080:8080 beekeeper
 ```
-You should get the state of the Hives when fetching your local endpoint
+
+You should get the state of the Hives when fetching your local endpoint 👇
 
 ![Result when fetching the api](docs/assets/result.png "Result when fetching the api")
 
@@ -186,7 +187,7 @@ image size: 118 MB
 Failed Instances
 ```
 
-You can detach the terminal now. You can check the status of your app later with **flyctl status**.
+You can detach the terminal now and check the status of your app with **flyctl status**.
 
 Your app is now online ! Lets try to access it.
 
@@ -196,7 +197,7 @@ Your app is now online ! Lets try to access it.
 
 Tadaam, you should see lots of bees, your app is deployed 🥳 !
 
-To redeploy the app after a change in your code/conf use **fly deploy**.
+To redeploy the app after a change in your code or conf use **fly deploy**.
 
 ### Conclusion
 
@@ -254,7 +255,7 @@ processes = []
 
 ### Regions
 
-You can currently deploy your apps in [26 differents regions](https://fly.io/docs/reference/regions/#fly-io-regions) with the command **flyctl regions add**. 
+You can currently deploy your apps in [26 differents regions](https://fly.io/docs/reference/regions/#fly-io-regions) with the command **flyctl regions add**.
 
 👉 Add Paris and Tokyo as new regions
 
